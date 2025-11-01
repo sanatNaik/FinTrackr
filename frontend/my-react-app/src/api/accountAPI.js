@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const fetchAccount = async (token) => {
     try{
-        const res = await axios.get("http://localhost:5000/api/accounts/get",{
+        const res = await axios.get("/api/accounts/get",{
             headers: { 
                 Authorization: `Bearer ${token}`
             },
