@@ -58,7 +58,6 @@ app.use("/api/transaction", transactionRoutes);
 // 🧩 SINGLE TELEGRAM WEBHOOK HANDLER
 app.post(`/webhook/${BOT_TOKEN}`, async (req, res) => {
   try {
-    console.log("✅ Telegram update received:", req.body);
 
     const message = req.body.message;
     if (!message || !message.chat) return res.sendStatus(200);
