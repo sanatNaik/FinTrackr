@@ -9,7 +9,7 @@ lerna-debug.log*
 
 # Dependency directories
 backend/node_modules/
-frontend/node_modules/
+frontend/my-react-app/node_modules/
 
 # Build outputs
 frontend/my-react-app/dist/
