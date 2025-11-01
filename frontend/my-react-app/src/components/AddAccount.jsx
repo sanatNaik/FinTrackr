@@ -19,7 +19,7 @@
             try {
                 if(editAccount){
                     console.log(editAccount);
-                    const res = await axios.put(`${API}/api/accounts/update/${editAccount._id}`,
+                    const res = await axios.put(`/api/accounts/update/${editAccount._id}`,
                     {account,type,balance:Number(balance)},
                     {
                     headers:{
@@ -32,7 +32,7 @@
                 if (onRefresh) onRefresh();
                 if(onAccountAdded) onAccountAdded();
                 }else{
-                    const res = await axios.post(`${API}/api/accounts/add`,
+                    const res = await axios.post(`/api/accounts/add`,
                     {account,type,balance:Number(balance)},
                     {
                     headers:{

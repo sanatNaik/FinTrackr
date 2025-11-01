@@ -30,7 +30,7 @@ const AddLog = ({  onTransactionAdded,editTransaction,setEditTransaction,onRefre
         try {
             if (editTransaction) {
               await axios.put(
-              `${API}/api/transaction/update/${editTransaction._id}`,
+              `/api/transaction/update/${editTransaction._id}`,
                { selectedAccountId, type, amount: Number(amount), date, label },
               { headers: { Authorization: `Bearer ${token}` } }
             );
@@ -40,8 +40,9 @@ const AddLog = ({  onTransactionAdded,editTransaction,setEditTransaction,onRefre
             if (onTransactionAdded) onTransactionAdded();
             if (onRefresh) onRefresh(); 
       } else {
+        console.log(API);
         await axios.post(
-          `${API}/api/transaction/add`,
+          `/api/transaction/add`,
           { selectedAccountId, type, amount: Number(amount), date, label },
           { headers: { Authorization: `Bearer ${token}` } }
         );

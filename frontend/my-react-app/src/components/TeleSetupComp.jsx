@@ -8,7 +8,7 @@ const TeleSetupComp = () => {
     const API = process.env.REACT_APP_API_URL;
     const handleTeleId = async (e) => {
         e.preventDefault();
-        await axios.put(`${API}/api/user/update`, 
+        await axios.put(`/api/user/update`, 
             { teleId },
             { headers: { Authorization: `Bearer ${token}` } }
         );

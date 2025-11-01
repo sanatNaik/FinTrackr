@@ -12,7 +12,7 @@ const SignupComp = () => {
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post(`${API}/api/auth/signup`,{
+            const res = await axios.post(`/api/auth/signup`,{
                 username,
                 email,
                 password,

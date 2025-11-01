@@ -50,7 +50,7 @@ const Dashboard = () => {
     const handleTransactionDelete = async(tx) => {
         try {
             await axios.delete(
-              `${API}/api/transaction/delete/${tx._id}`,
+              `/api/transaction/delete/${tx._id}`,
               { headers: { Authorization: `Bearer ${token}` } }
             );
             if (onRefresh) onRefresh(); 
