@@ -16,7 +16,6 @@ import { fileURLToPath } from "url";
 
 
 dotenv.config();
-console.log(process.env);
 
 const app = express();
 app.use(express.json());
@@ -33,7 +32,7 @@ const API_URL = `https://api.telegram.org/bot${BOT_TOKEN}`;
 
 
 // 🕘 Run every Monday at 9 AM (IST)
-cron.schedule("1 * * * *", async () => {
+cron.schedule("* * * * *", async () => {
   console.log("📅 Running weekly Telegram report...");
   await sendWeeklyReport();
 });
