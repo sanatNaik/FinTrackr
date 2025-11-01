@@ -33,7 +33,7 @@ const API_URL = `https://api.telegram.org/bot${BOT_TOKEN}`;
 
 
 // 🕘 Run every Monday at 9 AM (IST)
-cron.schedule("0 9 * * 1", async () => {
+cron.schedule("1 * * * *", async () => {
   console.log("📅 Running weekly Telegram report...");
   await sendWeeklyReport();
 });
