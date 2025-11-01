@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import AddLog from './AddLog'
-import AddAccount from './addAccount'
+import AddAccount from './AddAccount'
 import AccountDetail from './AccountDetail'
 import { Link } from 'react-router-dom'
 import { useState,onRefresh } from 'react'
