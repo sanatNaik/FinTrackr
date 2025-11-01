@@ -16,6 +16,7 @@ import { fileURLToPath } from "url";
 
 
 dotenv.config();
+console.log(process.env);
 
 const app = express();
 app.use(express.json());
