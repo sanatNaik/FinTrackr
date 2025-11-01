@@ -16,9 +16,11 @@ frontend/my-react-app/dist/
 backend/dist/
 dist/
 dist-ssr/
-
+backend/.env
+*.env
+*/.env
+frontend/my-react-app/.env
 # Local environment variables
-.env
 *.local
 
 # Editor directories and files
