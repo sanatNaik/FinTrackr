@@ -10,8 +10,6 @@ const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN; // keep it in .env
 export const sendWeeklyReport = async () => {
   try {
     const users = await User.find({ telegramId: { $exists: true, $ne: "" } });
-    console.log(BOT_TOKEN);
-    console.log(users);
     for (const user of users) {
       const lastWeek = new Date();
       lastWeek.setDate(lastWeek.getDate() - 7);

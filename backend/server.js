@@ -32,10 +32,17 @@ const API_URL = `https://api.telegram.org/bot${BOT_TOKEN}`;
 
 
 // 🕘 Run every Monday at 9 AM (IST)
-cron.schedule("* * * * *", async () => {
-  console.log("📅 Running weekly Telegram report...");
-  await sendWeeklyReport();
-});
+cron.schedule(
+  "0 9 * * 1", // ──> At 09:00 every Monday
+  async () => {
+    console.log("📅 Running weekly Telegram report at", new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }));
+    await sendWeeklyReport();
+  },
+  {
+    scheduled: true,
+    timezone: "Asia/Kolkata", // ensures it's 9 AM IST, not UTC
+  }
+);
 
 // 🌿 MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
